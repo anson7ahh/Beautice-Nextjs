@@ -8,19 +8,20 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-
     extend: {
       screens: {
         mobile: "572px",
         tablet: "995px",
+        ipadMini: "1200px",
         desktop: "1440px",
       },
       container: {
         center: true,
         screens: {
           mobile: "572px",
-          tablet: "900px",
-          desktop: "1140px",
+          tablet: "995px",
+          ipadMini: "1200px",
+          desktop: "1440px",
         },
       },
 
@@ -30,15 +31,13 @@ export default {
         darkblue: "#091156",
         darkgray: "#8b8b8b",
         darkslateblue: "#41487F",
-        vividpink: "#FF64AE"
+        vividpink: "#FF64AE",
       },
       fontFamily: {
-        poppins: 'Poppins, sans-serif, -apple-system',
-        serif: ['Source\\ Serif\\ 4', 'ui-serif', 'serif'],
+        poppins: "Poppins, sans-serif, -apple-system",
+        serif: ["Source\\ Serif\\ 4", "ui-serif", "serif"],
       },
-
     },
-
   },
   plugins: [],
 } satisfies Config;

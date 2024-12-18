@@ -1,71 +1,184 @@
-import Image from 'next/image'
-import React from 'react'
+import BottomBG from "./BottomBG";
+import FooterBG from "./FooterBG";
+import Icon from "./components/Icon";
+import Image from "next/image";
+import Item from "./components/Item";
+import React from "react";
 
-const Footer = () => {
-    return (
-
-        <footer className=" relative mt-[69.66px] w-full desktop:bg-darkblue tablet:bg-darkblue mobile:bg-darkblue">
-            <div className="w-full relative z-30 pt-[210.34px] flex flex-col container">
-                <div className="flex justify-center">
-                    <div className="mr-[155px] mb-[154px]">
-                        <Image className='mb-[34px] mt-4' src="/FooterLogo.png" alt="logo" width={258} height={63} />
-                        <p className="font-normal leading-[24px] tracking-[1.6px] text-[16px] text-[#D7DBFF] ml-[31px] mb-[22px]">
-                            <span className="text-base font-bold leading-6 tracking-[0.1em] text-left">Beautice</span>
-                            <span className="text-[#D7DBFF] text-base font-normal leading-6 tracking-[1.6px] text-left">is a Beauty Clinic WordPress
-                                Theme.</span>
-                        </p>
-                        <p className="text-[#D7DBFF] text-sm italic font-medium leading-[21px] tracking-[1.4px] text-left ml-[31px] mb-[4px]">Baker Steet 101, NY, United States.</p>
-                        <div className="flex gap-x-2">
-                            <p className="ml-[31px] text-[#D7DBFF] text-sm italic font-medium leading-[21px] tracking-[1.6px] text-left ">+521 569 8966.</p>
-                            <p className="text-[#D7DBFF] text-sm italic font-medium leading-[21px] tracking-[1.4px] text-left ">mail@company.com.</p>
-                        </div>
-                    </div>
-                    <div className="mr-[203.5px] flex flex-col gap-y-2">
-                        <span className="text-[#FFFFFF] text-lg font-semibold leading-[27px] tracking-[1.8px] text-left mb-3">Pages</span>
-                        <div className='flex flex-col gap-y-[11px] items-start '>
-                            <div className='flex gap-x-1 '> <Image src="/Vector.svg" alt="Vector" width={4.28} height={7.55} /><span className='text-[#D7DBFF] text-base font-normal leading-6 tracking-[0.1em] text-left'>Home</span></div>
-                            <div className='flex gap-x-1 '> <Image src="/Vector.svg" alt="Vector" width={4.28} height={7.55} /><span className='text-[#D7DBFF] text-base font-normal leading-6 tracking-[0.1em] text-left  '>About</span></div>
-                            <div className='flex gap-x-1 '> <Image src="/Vector.svg" alt="Vector" width={4.28} height={7.55} /><span className='text-[#D7DBFF] text-base font-normal leading-6 tracking-[0.1em] text-left  '>Services</span></div >
-                            <div className='flex gap-x-1 '> <Image src="/Vector.svg" alt="Vector" width={4.28} height={7.55} /><span className='text-[#D7DBFF] text-base font-normal leading-6 tracking-[0.1em] text-left  '>Gallery</span></div>
-                            <div className='flex gap-x-1 '> <Image src="/Vector.svg" alt="Vector" width={4.28} height={7.55} /><span className='text-[#D7DBFF] text-base font-normal leading-6 tracking-[0.1em] text-left '>Team</span></div >
-                        </div>
-                    </div>
-                    <div className=" flex flex-col gap-y-2">
-                        <span className="text-[#FFFFFF] text-lg font-semibold leading-[27px] tracking-[1.8px] text-left mb-3"> Informations</span>
-                        <div className='flex flex-col gap-y-[11px] items-start '>
-                            <div className='flex gap-x-1'><Image src="/Vector.svg" alt="Vector" width={4.28} height={7.55} /><span className='text-[#D7DBFF] text-base font-normal leading-6 tracking-[0.1em] text-left  '>Terms & conditions</span></div >
-                            <div className='flex gap-x-1'> <Image src="/Vector.svg" alt="Vector" width={4.28} height={7.55} /><span className='text-[#D7DBFF] text-base font-normal leading-6 tracking-[0.1em] text-left  '>Privacy policy</span></div >
-                            <div className='flex gap-x-1'> <Image src="/Vector.svg" alt="Vector" width={4.28} height={7.55} /><span className='text-[#D7DBFF] text-base font-normal leading-6 tracking-[0.1em] text-left  '>Blog</span></div >
-                            <div className='flex gap-x-1'> <Image src="/Vector.svg" alt="Vector" width={4.28} height={7.55} /><span className='text-[#D7DBFF] text-base font-normal leading-6 tracking-[0.1em] text-left  '>Contact</span></div >
-
-                        </div>
-                    </div>
-                </div>
-                <div className="flex  gap-x-[100px] desktop:mb-10 ">
-                    <div className="flex flex-row ml-[30px] gap-x-[41px] desktop:mr-[160px]">
-                        <Image src="/facebook-f.svg" alt="Facebook" width={25} height={27.84} />
-                        <Image src="/Twitter.svg" alt="Twitter" width={25} height={27.84} />
-                        <Image src="/linkedin-in.svg" alt="linkedin-in" width={25} height={27.84} />
-                        <Image src="/youtube.svg" alt="youtube" width={25} height={27.84} />
-                        <Image src="/Instagram.svg" alt="Instagram" width={25} height={27.84} />
-                    </div>
-                    <div className="text-[#D7DBFF] text-base font-normal leading-6 tracking-[1.6px] text-right mr-[149px]">
-                        <p>© AltDesain Studio 2021 - All right reserved.</p>
-                    </div>
-                </div>
-                <div className="absolute right-[175.6px] top-[500.34px]">
-                    <Image src="/ToTopButton.svg" alt="ToTopButton" width={36} height={36} />
-                </div>
-            </div>
-            <div className="absolute z-2 top-0 w-full bottom-5 desktop:hidden tablet:hidden mobile:hidden">
-                <Image src="/FooterBG.png" alt="FooterBG" width={1440} height={705.34} />
-            </div>
-            <div className="absolute z-[-2] w-full desktop:hidden tablet:hidden mobile:hidden">
-                <Image src="/BottomBG.png" alt="BottomBG" width={1440} height={125} />
-            </div>
-        </footer>
-
-    )
+interface Icons {
+  id: number;
+  Src: string;
+  Alt: string;
 }
+interface Item extends Icons {
+  Name: string;
+}
+interface GroupedItems {
+  pages: Item[];
+  Infomation: Item[];
+}
+const Items: GroupedItems[] = [
+  {
+    pages: [
+      {
+        id: 0,
+        Src: "/Vector.svg",
+        Name: "Home",
+        Alt: "Vector",
+      },
+      {
+        id: 1,
+        Src: "/Vector.svg",
+        Name: "About",
+        Alt: "Vector",
+      },
+      {
+        id: 2,
+        Src: "/Vector.svg",
+        Name: "Services",
+        Alt: "Vector",
+      },
+      {
+        id: 3,
+        Src: "/Vector.svg",
+        Name: "Gallery",
+        Alt: "Vector",
+      },
+      {
+        id: 4,
+        Src: "/Vector.svg",
+        Name: "Team",
+        Alt: "Vector",
+      },
+    ],
+    Infomation: [
+      {
+        id: 5,
+        Src: "/Vector.svg",
+        Name: "Terms & conditions",
+        Alt: "Vector",
+      },
+      {
+        id: 6,
+        Src: "/Vector.svg",
+        Name: "Privacy policy",
+        Alt: "Vector",
+      },
+      {
+        id: 7,
+        Src: "/Vector.svg",
+        Name: "Blog",
+        Alt: "Vector",
+      },
+      {
+        id: 8,
+        Src: "/Vector.svg",
+        Name: "Contact",
+        Alt: "Vector",
+      },
+    ],
+  },
+];
+const Icons: Icons[] = [
+  { id: 0, Src: "/facebook-f.svg", Alt: "facebook" },
+  { id: 1, Src: "/twitter.svg", Alt: "twitter" },
+  { id: 2, Src: "/linkedin-in.svg", Alt: "linkedin-in" },
+  { id: 4, Src: "/youtube.svg", Alt: "youtube" },
+  { id: 5, Src: "/Instagram.svg", Alt: "Instagram" },
+];
+const Footer = () => {
+  return (
+    <footer className=" relative mt-[100.66px] tablet:bg-darkblue tablet:w-full w-full ">
+      <div className="container w-full relative z-30  flex flex-col tablet:px-10 ">
+        <div className="flex justify-center mb-10 pt-20  tablet:gap-x-[150px] tablet:mb-[150px] desktop:gap-x-0 mobile:mb-10 ">
+          <div className="desktop:mr-[155px] mobile:mx-auto tablet:mx-0 mobile:pt-20 tablet:pt-0">
+            <Image
+              className="mb-[34px] mt-4 mobile:mx-auto tablet:mx-0 mx-auto"
+              src="/FooterLogo.png"
+              alt="logo"
+              width={258}
+              height={63}
+            />
+            <p className="font-normal tracking-[1.6px] text-[16px] text-white ml-[31px] mb-[22px] text-center tablet:text-left">
+              <span className="mobile:text-base font-bold  tracking-[0.1em] text-left text-sm">
+                Beautice
+              </span>
+              <span className="text-white mobile:text-base font-normal  tracking-[1.6px] text-left text-sm">
+                is a Beauty Clinic WordPress Theme.
+              </span>
+            </p>
+            <p className="text-white text-sm italic font-medium tracking-[1.4px] ipadMini:text-left ml-[31px] mb-[4px] mobile:text-center tablet:text-left text-center">
+              Baker Steet 101, NY, United States.
+            </p>
+            <div className="flex gap-y-2 tablet:gap-x-2 tablet:flex-row flex-col mobile:mx-auto tablet:mx-0 ipadMini:ml-[31px] tablet:ml-[31px] text-center ">
+              <p className="  text-white text-sm italic font-medium tracking-[1.6px] ipadMini:text-left mobile:mx-auto tablet:mx-0  ">
+                +521 569 8966.
+              </p>
+              <p className="text-white text-center text-sm italic font-medium tracking-[1.4px] ipadMini:text-left mobile:mx-auto tablet:mx-0">
+                mail@company.com.
+              </p>
+            </div>
+          </div>
+          <div className="desktop:mr-[203.5px]  flex-col gap-y-2   hidden tablet:flex">
+            <span className="text-white text-lg font-semibold tracking-[1.8px] text-left mb-3 ">
+              Pages
+            </span>
+            <div className="flex flex-col gap-y-[11px] items-start ">
+              {Items[0].pages.map((item) => (
+                <Item
+                  key={item.id}
+                  Src={item.Src}
+                  Alt={item.Alt}
+                  Name={item.Name}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="  flex-col gap-y-2 hidden tablet:flex  ">
+            <span className="text-white text-lg font-semibold  tracking-[1.8px] text-left mb-3">
+              {" "}
+              Informations
+            </span>
+            <div className="flex flex-col gap-y-[11px] items-start">
+              {Items[0].Infomation.map((item) => (
+                <Item
+                  key={item.id}
+                  Src={item.Src}
+                  Alt={item.Alt}
+                  Name={item.Name}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="flex gap-x-[30px] ipadMini:mb-10 tablet:mb-10  flex-col tablet:flex-row mobile:mx-auto tablet:mx-0 tablet:gap-x-[200px]  ">
+          <div className="flex mx-auto flex-row ipadMini:ml-[30px] ipadMini:justify-between gap-x-[41px] desktop:mr-[160px] mobile:mx-auto tablet:mx-0 mobile:mb-5">
+            {Icons.map((icon) => (
+              <Icon key={icon.id} Src={icon.Src} Alt={icon.Alt} />
+            ))}
+          </div>
+          <div className="text-white text-base font-normal  tracking-[1.6px] text-left max-w-full mx-auto ">
+            <p className="whitespace-nowrap w-full ">
+              © AltDesain Studio 2021 - All right reserved.
+            </p>
+          </div>
+        </div>
+        <div
+          className="absolute top-[287px] right-[50px] ipadMini:right-[175.6px] ipadMini:top-[366.34px] desktop:top-[347.34px]
+                 desktop:right-0 mobile:top-[360px] mobile:right-[0px] tablet:top-[333px] tablet:right-[39px] "
+        >
+          <Image
+            src="/ToTopButton.svg"
+            alt="ToTopButton"
+            width={36}
+            height={36}
+          />
+        </div>
+      </div>
+      <FooterBG />
+      <BottomBG />
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
