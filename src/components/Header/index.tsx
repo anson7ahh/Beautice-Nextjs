@@ -1,7 +1,7 @@
 "use client";
 
-import BgHeader from "./bgHeader";
-import { Button } from "../common";
+import BgHeader from "./components/BgHeader";
+import { Button } from "../commons";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

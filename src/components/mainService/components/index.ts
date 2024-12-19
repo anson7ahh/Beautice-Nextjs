@@ -1,1 +1,1 @@
-export * from "./mainServiceItems";
+export * from "./MainServiceItems";

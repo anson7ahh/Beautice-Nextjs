@@ -1,5 +1,5 @@
 import { BgAboutUs } from "./BgAboutUs";
-import { Button } from "../common";
+import { Button } from "../commons";
 import Image from "next/image";
 import React from "react";
 

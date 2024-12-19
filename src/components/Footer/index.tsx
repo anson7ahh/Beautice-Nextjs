@@ -1,9 +1,10 @@
-import BottomBG from "./bottomBG";
-import FooterBG from "./footerBG";
-import Icon from "./components/icon";
+
 import Image from "next/image";
-import Item from "./components/item";
 import React from "react";
+import Item from "./components/Item";
+import Icon from "./components/Icon";
+import FooterBG from "./components/FooterBG";
+import BottomBG from "./components/BottomBG";
 
 interface Item {
   src: string;
