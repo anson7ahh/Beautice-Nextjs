@@ -1,90 +1,78 @@
-import BottomBG from "./BottomBG";
-import FooterBG from "./FooterBG";
-import Icon from "./components/Icon";
+import BottomBG from "./bottomBG";
+import FooterBG from "./footerBG";
+import Icon from "./components/icon";
 import Image from "next/image";
-import Item from "./components/Item";
+import Item from "./components/item";
 import React from "react";
 
-interface Icons {
-  id: number;
-  Src: string;
-  Alt: string;
+interface Item {
+  src: string;
+  alt: string;
+  name?: string;
 }
-interface Item extends Icons {
-  Name: string;
-}
+
 interface GroupedItems {
   pages: Item[];
   Infomation: Item[];
 }
-const Items: GroupedItems[] = [
-  {
-    pages: [
-      {
-        id: 0,
-        Src: "/Vector.svg",
-        Name: "Home",
-        Alt: "Vector",
-      },
-      {
-        id: 1,
-        Src: "/Vector.svg",
-        Name: "About",
-        Alt: "Vector",
-      },
-      {
-        id: 2,
-        Src: "/Vector.svg",
-        Name: "Services",
-        Alt: "Vector",
-      },
-      {
-        id: 3,
-        Src: "/Vector.svg",
-        Name: "Gallery",
-        Alt: "Vector",
-      },
-      {
-        id: 4,
-        Src: "/Vector.svg",
-        Name: "Team",
-        Alt: "Vector",
-      },
-    ],
-    Infomation: [
-      {
-        id: 5,
-        Src: "/Vector.svg",
-        Name: "Terms & conditions",
-        Alt: "Vector",
-      },
-      {
-        id: 6,
-        Src: "/Vector.svg",
-        Name: "Privacy policy",
-        Alt: "Vector",
-      },
-      {
-        id: 7,
-        Src: "/Vector.svg",
-        Name: "Blog",
-        Alt: "Vector",
-      },
-      {
-        id: 8,
-        Src: "/Vector.svg",
-        Name: "Contact",
-        Alt: "Vector",
-      },
-    ],
-  },
-];
-const Icons: Icons[] = [
-  { id: 0, Src: "/facebook-f.svg", Alt: "facebook" },
-  { id: 1, Src: "/twitter.svg", Alt: "twitter" },
-  { id: 2, Src: "/linkedin-in.svg", Alt: "linkedin-in" },
-  { id: 4, Src: "/youtube.svg", Alt: "youtube" },
-  { id: 5, Src: "/Instagram.svg", Alt: "Instagram" },
+const Items: GroupedItems = {
+  pages: [
+    {
+      src: "/Vector.svg",
+      name: "Home",
+      alt: "Vector",
+    },
+    {
+      src: "/Vector.svg",
+      name: "About",
+      alt: "Vector",
+    },
+    {
+      src: "/Vector.svg",
+      name: "Services",
+      alt: "Vector",
+    },
+    {
+      src: "/Vector.svg",
+      name: "Gallery",
+      alt: "Vector",
+    },
+    {
+      src: "/Vector.svg",
+      name: "Team",
+      alt: "Vector",
+    },
+  ],
+  Infomation: [
+    {
+      src: "/Vector.svg",
+      name: "Terms & conditions",
+      alt: "Vector",
+    },
+    {
+      src: "/Vector.svg",
+      name: "Privacy policy",
+      alt: "Vector",
+    },
+    {
+      src: "/Vector.svg",
+      name: "Blog",
+      alt: "Vector",
+    },
+    {
+      src: "/Vector.svg",
+      name: "Contact",
+      alt: "Vector",
+    },
+  ],
+};
+
+const Icons: Item[] = [
+  { src: "/facebook-f.svg", alt: "facebook" },
+  { src: "/twitter.svg", alt: "twitter" },
+  { src: "/linkedin-in.svg", alt: "linkedin-in" },
+  { src: "/youtube.svg", alt: "youtube" },
+  { src: "/instagram.svg", alt: "Instagram" },
 ];
 const Footer = () => {
   return (
@@ -124,12 +112,12 @@ const Footer = () => {
               Pages
             </span>
             <div className="flex flex-col gap-y-[11px] items-start ">
-              {Items[0].pages.map((item) => (
+              {Items.pages.map((item, index) => (
                 <Item
-                  key={item.id}
-                  Src={item.Src}
-                  Alt={item.Alt}
-                  Name={item.Name}
+                  key={index}
+                  src={item.src}
+                  alt={item.alt}
+                  name={item.name}
                 />
               ))}
             </div>
@@ -140,24 +128,24 @@ const Footer = () => {
               Informations
             </span>
             <div className="flex flex-col gap-y-[11px] items-start">
-              {Items[0].Infomation.map((item) => (
+              {Items.Infomation.map((item, index) => (
                 <Item
-                  key={item.id}
-                  Src={item.Src}
-                  Alt={item.Alt}
-                  Name={item.Name}
+                  key={index}
+                  src={item.src}
+                  alt={item.alt}
+                  name={item.name}
                 />
               ))}
             </div>
           </div>
         </div>
-        <div className="flex gap-x-[30px] ipadMini:mb-10 tablet:mb-10  flex-col tablet:flex-row mobile:mx-auto tablet:mx-0 tablet:gap-x-[200px]  ">
+        <div className="flex justify-center tablet:gap-x-[150px] tablet:mb-10  flex-col tablet:flex-row mobile:mx-auto tablet:mx-0 tablet:gap-x-[200px]  ">
           <div className="flex mx-auto flex-row ipadMini:ml-[30px] ipadMini:justify-between gap-x-[41px] desktop:mr-[160px] mobile:mx-auto tablet:mx-0 mobile:mb-5">
-            {Icons.map((icon) => (
-              <Icon key={icon.id} Src={icon.Src} Alt={icon.Alt} />
+            {Icons.map((icon, index) => (
+              <Icon key={index} src={icon.src} alt={icon.alt} />
             ))}
           </div>
-          <div className="text-white text-base font-normal  tracking-[1.6px] text-left max-w-full mx-auto ">
+          <div className="text-white text-base font-normal  tracking-[1.6px] text-left max-w-full mx-auto tablet:mx-0 ">
             <p className="whitespace-nowrap w-full ">
               © AltDesain Studio 2021 - All right reserved.
             </p>

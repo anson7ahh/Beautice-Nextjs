@@ -19,7 +19,7 @@ export default {
         center: true,
         screens: {
           mobile: "572px",
-          tablet: "995px",
+          tablet: "990px",
           ipadMini: "1200px",
           desktop: "1440px",
         },
