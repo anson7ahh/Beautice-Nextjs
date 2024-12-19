@@ -1,3 +1,5 @@
+"use client";
+
 import BgHeader from "./bgHeader";
 import { Button } from "../common";
 import Image from "next/image";
