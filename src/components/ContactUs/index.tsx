@@ -1,9 +1,9 @@
 import BgContacUs from "./bgContacUs";
-import { Form } from "./components";
+import { FormContactUs } from "./components/formContactUs";
 import Image from "next/image";
 import React from "react";
 
-const ContactUs = () => {
+const contactUs = () => {
   return (
     <>
       <div className="container relative mt-[150px] flex  ipadMini:flex-row z-30 mb-[69.66px] gap-x-[100px] px-5 ipadMini:px-0 ">
@@ -25,11 +25,11 @@ const ContactUs = () => {
           <p className="text-[#8B8B8B] text-base leading-[24px] tracking-[1.6px] font-normal mb-10">
             Lorem ipsum dolor sit amet nulla turapis tellus.
           </p>
-          <Form />
+          <FormContactUs />
         </div>
       </div>
       <BgContacUs />
     </>
   );
 };
-export default ContactUs;
+export default contactUs;

@@ -139,7 +139,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center tablet:gap-x-[150px] tablet:mb-10  flex-col tablet:flex-row mobile:mx-auto tablet:mx-0 tablet:gap-x-[200px]  ">
+        <div className="flex justify-center  tablet:mb-10  flex-col tablet:flex-row mobile:mx-auto tablet:mx-0 tablet:gap-x-[200px]  ">
           <div className="flex mx-auto flex-row ipadMini:ml-[30px] ipadMini:justify-between gap-x-[41px] desktop:mr-[160px] mobile:mx-auto tablet:mx-0 mobile:mb-5">
             {Icons.map((icon, index) => (
               <Icon key={index} src={icon.src} alt={icon.alt} />

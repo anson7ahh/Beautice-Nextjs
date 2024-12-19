@@ -1,7 +1,7 @@
 import { Button } from "@/components/common";
 import React from "react";
 
-export const Form = () => {
+export const FormContactUs = () => {
   return (
     <div>
       <form className="" action="">
