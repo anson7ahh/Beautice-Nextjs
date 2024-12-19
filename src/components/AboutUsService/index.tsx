@@ -1,4 +1,4 @@
-import { BgAboutUs } from "./BgAboutUs";
+import { BgAboutUs } from "./components/BgAboutUs";
 import { Button } from "../commons";
 import Image from "next/image";
 import React from "react";

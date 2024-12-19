@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const BgContacUs = () => {
+const BgContactUs = () => {
   return (
     <div className="absolute top-[3238px] z-0 hidden ipadMini:block">
       <div className="">
@@ -15,4 +15,4 @@ const BgContacUs = () => {
     </div>
   );
 };
-export default BgContacUs;
+export default BgContactUs;

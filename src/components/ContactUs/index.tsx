@@ -1,4 +1,4 @@
-import BgContacUs from "./BgContacUs";
+import BgContactUs from "./components/BgContactUs"
 import { FormContactUs } from "./components/FormContactUs";
 import Image from "next/image";
 import React from "react";
@@ -28,7 +28,7 @@ const ContactUs = () => {
           <FormContactUs />
         </div>
       </div>
-      <BgContacUs />
+      <BgContactUs />
     </>
   );
 };
